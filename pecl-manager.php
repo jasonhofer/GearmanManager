@@ -31,6 +31,7 @@ class GearmanPeclManager extends GearmanManager {
         $thisWorker = new GearmanWorker();
 
         $thisWorker->addOptions(GEARMAN_WORKER_NON_BLOCKING);
+        $thisWorker->addOptions(GEARMAN_WORKER_GRAB_UNIQ);
 
         $thisWorker->setTimeout(5000);
 
